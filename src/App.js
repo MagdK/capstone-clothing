@@ -15,7 +15,7 @@ const App = () => {
         <Route index={true} element={<Home />} /> 
         {/* index without ={true} works as well*/}
         <Route path="shop" element={<Shop /> } />
-        <Route path="signIn" element={<SignIn /> } />
+        <Route path="sign-in" element={<SignIn /> } />
       </Route>
     </Routes>
   );
