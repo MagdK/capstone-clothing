@@ -9,9 +9,11 @@ import {
 } from '../../utils/firebase/firebase.utils'
 
 const SignIn = () => {
-    useEffect(async () => {
+    useEffect(() => {
+        (async () => {
         const response = await getRedirectResult(auth);
         console.log(response);
+        })()
     }, []); 
     // when we pass an empty array, it means "run this function when the component mounts for the first time"
 
