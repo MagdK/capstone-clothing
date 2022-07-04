@@ -7,13 +7,13 @@ import {
     signInWithGoogleRedirect,
     createUserDocumentFromAuth
 } from '../../utils/firebase/firebase.utils'
-import { async } from '@firebase/util';
 
 const SignIn = () => {
     useEffect(async () => {
         const response = await getRedirectResult(auth);
         console.log(response);
-    }, []); // when we pass an empty array, it means "run this function when the component mounts for the first time"
+    }, []); 
+    // when we pass an empty array, it means "run this function when the component mounts for the first time"
 
     const logGoogleUser = async () => {
         const { user } = await signInWithGooglePopup();
