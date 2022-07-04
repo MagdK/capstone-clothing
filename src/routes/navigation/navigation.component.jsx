@@ -3,6 +3,8 @@ import { Fragment } from 'react';
 
 import { ReactComponent as SiteLogo } from '../../assets/site_logo.svg';
 
+import './navigation.styles.scss';
+
 const Navigation = () => {
     return (
       <Fragment>

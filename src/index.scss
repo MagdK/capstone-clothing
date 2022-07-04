@@ -1,3 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	background: transparent;
+	font-family: inherit;
+}
+
+a {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+button,
+a {
+	cursor: pointer;
+	color: inherit;
+}  
+
+textarea {
+	resize: none;
+}
+
+button,
+textarea,
+select {
+	appearance: none !important;
+	border-radius: 0;
+}
+
+/* RESET OVER */
+
 body {
   margin: 0;
   font-family: 'Barlow Condensed', sans-serif;
@@ -8,4 +45,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  color: black;
 }
