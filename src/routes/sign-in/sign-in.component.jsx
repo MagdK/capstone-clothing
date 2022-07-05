@@ -2,19 +2,24 @@ import { useEffect } from 'react';
 import { getRedirectResult } from 'firebase/auth';
 
 import { 
-    auth,
+    /* auth, */
     signInWithGooglePopup, 
-    signInWithGoogleRedirect,
+    /* signInWithGoogleRedirect, */
     createUserDocumentFromAuth
 } from '../../utils/firebase/firebase.utils'
 
 const SignIn = () => {
-    useEffect(() => {
+    /* useEffect(() => {
         (async () => {
         const response = await getRedirectResult(auth);
+
+        if(response) {
+            const userDocRef = await createUserDocumentFromAuth(response.user);
+
+        }
         console.log(response);
         })()
-    }, []); 
+    }, []);  */
     // when we pass an empty array, it means "run this function when the component mounts for the first time"
 
     const logGoogleUser = async () => {
@@ -28,9 +33,9 @@ const SignIn = () => {
             <button onClick={logGoogleUser}>
                 Sign in with Google Popup
             </button>
-            <button onClick={signInWithGoogleRedirect}>
+            {/* <button onClick={signInWithGoogleRedirect}>
                 Sign in with Google Redirect
-            </button>
+            </button> */}
         </div>
     )
 }
