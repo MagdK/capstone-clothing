@@ -40,7 +40,16 @@ const SignInForm = () => {
             resetFormFields();
 
         } catch(error) {
-            
+            switch(error.code) {
+                case "auth/wrong-password":
+                    alert("Incorrect password")
+                    break;
+                case "auth/user-not-found":
+                    alert('no user associated with this email');
+                    break;
+                default:
+                    console.log(error);
+            }
         }
     }
 
